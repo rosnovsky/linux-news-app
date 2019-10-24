@@ -1,7 +1,7 @@
 {
-  "name": "linux-nes-app",
-  "version": "1.0.0",
-  "license": "GPLv3",
+  "name": "linux-news-app",
+  "version": "1.0.1",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "rollup": "^1.12.0",
     "rollup-plugin-commonjs": "^10.0.0",
