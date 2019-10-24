@@ -7,7 +7,7 @@
 	const apiKey = `API_KEY`;
 	const today = moment();
 	const date = moment(today).subtract(1, 'weeks').toISOString();
-	const excludedDomains = 'sourceforge.net,github.com,askubuntu.com,stackoverflow.com,pypi.org,digitalocean.com,linuxsecurity.com,linuxgizmos.com'
+	const excludedDomains = 'sourceforge.net,github.com,askubuntu.com,stackoverflow.com,pypi.org,digitalocean.com,linuxsecurity.com,linuxgizmos.com,img.tfd.com'
 	const URL = `https://newsapi.org/v2/everything?q=Linux&from=${date}&language=en&sortBy=publishedAt&excludeDomains=${excludedDomains}&apiKey=${apiKey}`; 
 	let articles = [];
 
