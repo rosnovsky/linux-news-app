@@ -1,5 +1,6 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
+import replace from 'rollup-plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
@@ -24,6 +25,9 @@ export default {
 			css: css => {
 				css.write('public/bundle.css');
 			}
+		}),
+		replace({
+			API_KEY: process.env.API_KEY
 		}),
 
 		// If you have external dependencies installed from
