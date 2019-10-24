@@ -5,8 +5,9 @@
 	import { onMount } from 'svelte';
 	const today = moment();
 	const date = moment(today).subtract(1, 'weeks').toISOString();
+	const excludedDomains = 'sourceforge.net,github.com,askubuntu.com,stackoverflow.com,pypi.org,digitalocean.com,linuxsecurity.com' 
 	const API_KEY = '1e02b71a9a414f15bec68e2334d73806';
-	const URL = `https://newsapi.org/v2/everything?q=Linux&from=${date}&language=en&sortBy=publishedAt&excludeDomains=sourceforge.net,github.com,askubuntu.com,stackoverflow.com,pypi.org&apiKey=${API_KEY}`;
+	const URL = `https://newsapi.org/v2/everything?q=Linux&from=${date}&language=en&sortBy=publishedAt&excludeDomains=${excludedDomains}&apiKey=${API_KEY}`;
 	let articles = [];
 
 	onMount(async function(){
